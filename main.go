@@ -8,6 +8,7 @@ import (
 )
 
 func main() {
+	connectClientCmd.Flags().StringVarP(&name, "name", "n", "", "Name to use for the connection")
 	rootCmd := &cobra.Command{
 		Use:   "broadcast-server",
 		Short: "Broadcast Server for WebSocket-based real-time messaging",
